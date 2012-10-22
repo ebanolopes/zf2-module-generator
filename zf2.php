@@ -33,9 +33,18 @@ switch ($command) {
 		$type = $argv[2];
 		
 		switch ($type) {
+
 			case "module":
+
 				$module = $argv[3];
+
 				copyTemplate(__DIR__ . '/module/Template', $module);
+
+				if ( isset($argv[4]) && $argv[4] == 'with_tests' ) {
+
+					copyTemplate(__DIR__ . '/tests/module/Template', $module);
+
+				}
 		}
 		break;
 }
