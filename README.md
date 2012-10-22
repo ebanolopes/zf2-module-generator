@@ -25,7 +25,13 @@ Usage
 -----
 Change/add new files and directories into you application module/Template directory, following "Concepts" rules.
 
-On shell type the follow command, from your application root directory: ./zf2 create module NewModule
+On shell type the follow command, from your application root directory: 
+
+./zf2 create module NewModule
+
+If you want to create tests to your new module, just pass the 'with_tests' parameter:
+
+./zf2 create module NewModule with_tests
 
 Don't forget to add your "NewModule" module to modules configuration on config/application.config.php
 
